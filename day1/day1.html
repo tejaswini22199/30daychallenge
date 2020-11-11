@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Music-keys</title>
+    <link rel="stylesheet" href="C:\Users\vakka\Desktop\30dayChallenge\day1\day1.css">
+</head>
+<body>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="66" class="key">
+            <kbd>B</kbd>
+            <span class="sound">Hihat</span>
+        </div>
+        <div data-key="67" class="key">
+            <kbd>C</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">openhat</span>
+        </div>
+        <div data-key="69" class="key">
+            <kbd>E</kbd>
+            <span class="sound">Boom</span>
+        </div>
+    </div>
+    <audio data-key="65" src="sounds/song1.wav"></audio>
+    <audio data-key="66" src="sounds/song2.wav"></audio>
+    <audio data-key="67" src="sounds/song3.wav"></audio>
+    <audio data-key="68" src="sounds/song4.wav"></audio>
+    <audio data-key="69" src="sounds/song5.wav"></audio>
+    <script>
+        removetransition=(e)=>
+        {
+            if(e.propertyName!=='transform')
+            return;
+            e.target.classList.remove('playing');
+        }
+        playSound=(e)=>
+        {
+            const audio=document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key=document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if(!audio)
+            return;
+           
+            audio.currentTime=0;
+            audio.play();
+            key.classList.add('playing');
+        }
+        const keys=Array.from(document.querySelectorAll('.key'));
+        keys.forEach(key=>key.addEventListener('transitionend',removetransition));
+        window.addEventListener('keydown',playSound);
+        console.log(window);
+      
+    </script>
+</body>
+</html>
