@@ -1,1 +1,1 @@
-<img src="clock\time.jpg">
+<img src="clock\time.jpg" width="200px">
