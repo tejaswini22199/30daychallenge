@@ -1,1 +1,1 @@
-<img src="clock\time.jpg" width="200px">
+![clock](https://github.com/tejaswini22199/30daychallenge/blob/main/clock/time.JPG)
