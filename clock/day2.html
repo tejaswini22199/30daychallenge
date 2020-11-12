@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="day2.css">
+    <script>
+        function myfun(){
+        var d=new Date();
+        document.getElementById("presentdate").innerHTML=d;
+        var text=document.getElementById("presentdate");
+        text.style.color="#FFFFFF"
+        }
+    </script>
+</head>
+<body onload="myfun()">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        </style>
+    <div class="clock">
+        <div class="clockface">
+            <div class="hand hour-hand">
+            </div>
+            <div class="hand min-hand">
+            </div>
+            <div class="hand sec-hand">
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1>
+            <span id="presentdate"></span>
+        </h1>
+    </div>
+    <script src="day2.js">
+       
+    </script>
+
+</body>
+</html>
