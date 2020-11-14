@@ -1,0 +1,20 @@
+:root
+{
+    --base:rgb(221, 191, 22);
+    --spacing:10px;
+    --blur:10px;
+}
+html{
+    background-size:cover;
+}
+body{
+    background-color: rgb(22, 161, 241);
+    text-align:center;
+    color:rgb(255, 0, 140);
+}
+img
+{
+    padding:var(--spacing);
+    background:var(--base);
+    filter:blur(var(--blur));
+}
