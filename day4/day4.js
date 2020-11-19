@@ -54,4 +54,24 @@ const val=data.reduce((a,b)=>{
     a[b]++;
     return a;
 },{});
-console.log(val);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
